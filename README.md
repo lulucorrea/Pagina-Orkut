@@ -5,4 +5,4 @@ Página do Orkut feita para um trabalho escolar, onde recriei a página do Orkut
 Algumas coisas foram alteradas para deixar uma estética mais agradável.
 </br>
 </br>
-Nenhum dos botões funciona, a nã ser pelo botão SAIR que leva para uma página de "login" do Orkut.
+Nenhum dos botões funciona, a não ser pelo botão SAIR que leva para uma página de "login" do Orkut.
