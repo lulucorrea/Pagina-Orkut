@@ -1,0 +1,161 @@
+/* geral*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root{
+    font-size: 70%;
+    --bg-amig-com: #CCDCFF;
+    --bg-home-sections: #fff;
+    --bg-header: #5C9ECF;
+    --text-bio: #2e7ab4;
+    --bg: #d9e6f6; 
+    --line-menu: #5292C1;
+}
+
+body{
+    background-color: var(--bg) ;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    font-size: 1.2rem;
+}
+
+/* container login */
+#login-container{
+    background-color: var(--bg-home-sections);
+    width: 40rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 3rem;
+    margin-top: 13vh;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+/* Texto inicial*/ 
+.logo-login{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+}
+
+.logo-login img {
+    padding: 0.3rem;
+    width: 6.8rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.text-login{
+    font-weight: 300;
+}
+
+.text-login span{
+    font-size: 1.8rem;
+}
+
+.text-login p{
+    padding-top: 0.5rem;
+    font-size: 1.3rem;
+}
+
+#login-container h1{
+    padding-top: 0.8rem;
+    font-size: 2.6rem;
+    padding-bottom: 1rem;
+}
+
+#login-container > h1::before{
+    content: "";
+    border-bottom: 0.2rem solid var(--line-menu);
+    display: block;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+/* formulário */
+label, input {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-top: 1rem;
+}
+
+.input-box input {
+    background: var(--bg);
+    margin: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.6rem #0000001c;
+}
+
+.input-box input:hover {
+    background-color: var(--bg-amig-com);
+}
+
+.input-box input:focus-visible {
+    outline: 0.1rem solid var(--bg-header);
+}
+
+input:focus {
+    border-bottom: 0.2rem solid var(--text-bio);
+}
+
+.forgot-pass {
+    text-align: right;
+    display: block;
+    padding-top: 0.5rem;
+}
+
+#register-container a, .forgot-pass a{
+    text-decoration: none;
+    color: var(--text-bio);
+}
+
+/* botão login */
+.login-button button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    border: none;
+    background-color: var(--line-menu);
+    padding: 0.62rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.login-button button:hover {
+    background-color: var(--text-bio);
+    transition: .5s;
+    box-shadow: 0.2rem 0.2rem 0.2rem #ffffffbe;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    font-size: 2rem;
+}
+
+/* resgitrar */
+#register-container p {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}

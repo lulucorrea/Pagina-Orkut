@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700&display=swap');
+/*geral */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root{
+    font-size: 65%;
+    --bg: #d9e6f6; 
+    --bg-header: #5C9ECF;
+    --bg-home-sections: #fff;
+    --text-bio: #2e7ab4;
+    --text-menu: #fff;
+    --line-menu: #5292C1;
+    --input-search: #b0cef0e8;
+    --aside-line: #fb8cd2c2;
+    --bg-amig-com: #CCDCFF;
+    --text-bio-description: #999;
+    --text-count-infos: #5a5a5a;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body{
+    background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.8rem;
+    align-items: center;
+}
+
+.container-main{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 120rem;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+/* geral topo */
+header{
+    width: 100%;
+    display: flex;
+    background-color: var(--bg-header);
+    padding: 0.6rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-login{
+    background: var(--bg-home-sections);
+    width: 8.8rem;
+    height: 3.4rem;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20rem;
+}
+
+.logo-login img {
+    padding: 0.3rem;
+    width: 6.8rem;
+    height: 2.5rem;
+}
+
+/* atalhos topo */
+nav{
+    display: flex;
+    height: 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul{
+    display: flex;
+    list-style: none;
+    gap: 1.6rem;
+}
+
+header ul a{
+    text-decoration: none;
+    color: var(--text-menu);
+    font-size: 1.6rem;
+}
+
+header ul a:hover{
+    font-weight: bold;
+}
+
+header li + li::before{
+    content:"";
+    border-left: 2px solid var(--line-menu);
+    padding-right: 1.6rem;
+}
+
+/* botão sair */
+.logout{
+    margin-left: 12rem;
+}
+
+.logout a{
+    text-decoration: none;
+    color: var(--text-menu);
+    font-size: 1.4rem;
+}
+
+.logout a:hover {
+    font-weight: bold;
+}
+
+.logout a::before{
+    content:"";
+    border-left: 0.25rem solid var(--line-menu);
+    margin: 0 1.6rem 0 3.4rem;
+}
+
+form input{
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 3.4rem;
+    background: var(--input-search) url(./imagens/icons8-search-28.png) no-repeat scroll 0.8rem 0.5rem;
+    padding-left: 30px;
+    padding: 1rem 4rem;
+    margin-left: 1.9rem;
+    color: var(--text-menu);
+    outline: none;
+}
+
+form input::placeholder{
+    color: var(--text-menu);
+}
+
+/* divisão lateral esquerda */
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24rem;
+    height: 55rem;
+    background: var(--bg-home-sections);
+    border-radius: 1.2rem;
+    justify-content: start;
+}
+
+div .img-profile{
+    padding: 1.5rem;
+}
+
+.img-profile img {
+    width: 22rem;
+    height: 22rem;
+    border-radius: 20%;
+}
+
+aside > div + div::before{
+    content: "";
+    border-bottom: 0.2rem solid var(--input-search);
+    display: block;
+    width: 23rem;
+}
+
+div .bio{
+    text-align: start;
+}
+
+div .bio h3{
+    padding: 0.8rem 0 0.8rem 0.8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-bio);
+}
+
+div .bio p {
+    padding: 0 0 0.8rem 0.8rem;
+    font-size: 1.5rem;
+    color: var(--text-bio-description);
+}
+
+div .social-media a {
+    text-decoration: none;
+    color: var(--text-bio);
+    padding-left: 0.5rem;
+}
+
+.social-media div {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 0.8rem;
+}
+
+
+/* divisão central inicial*/
+.main-middle {
+    padding: 0 2rem 0 2rem;
+}
+
+.welcome{
+    background: var(--bg-home-sections);
+    border-radius: 0.8rem 4rem 0.8rem 4rem;
+    padding: 2rem;
+}
+
+.welcome h2{
+    font-size: 3.2rem;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+}
+
+.text-welcome > p span {
+    font-weight: 700;
+}
+
+.text-welcome{
+    font-size: 1.4rem;
+    color: var(--text-bio-description);
+    padding-top: 2rem;
+}
+
+.count-infos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+  
+.count-infos .img {
+    display: flex;
+    align-items: center;
+}
+  
+div .img {
+    display: flex;
+    align-items: center;
+}
+  
+.recados p, .fotos p, .fotos-comigo p, .fãs p, .menssagens p {
+    font-size: 1.5rem;
+    padding: 0.3rem 0 0.5rem 0;
+    color: var(--text-count-infos);
+}
+
+.count-infos img{
+    padding-right: 0.8rem;
+}
+
+/*divisão central inferior */
+.messages {
+    background: var(--bg-home-sections);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.messages h2{
+    font-weight: 400;
+    font-size: 2.2rem;
+}
+
+.messages h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 1rem;
+    display: flex;
+}
+
+.img-messages {
+    display: flex;
+    align-items: center;
+}
+
+div .list-messages img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 20%;
+}
+
+div .info-messages {
+    background: var(--bg-amig-com);
+    align-items: center;
+    margin-top: 0.5rem;
+    border-radius: 0.8rem;
+    padding: 1rem; 
+}
+ 
+.info-messages p{
+    padding-top: 0.8rem;
+    font-size: 1.6rem;
+}
+
+.list-messages{
+    margin-top: 1rem;
+}
+
+/* divisão lateral direita */
+.amigos, .comunidades{
+    background: var(--bg-home-sections);
+    border-radius: 0.8rem;
+    padding: 1.5rem;
+    width: 40rem;
+    font-size: 1.2rem;
+}
+
+.info-bests, .info-com{
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.info-bests h2, .info-com h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.info-bests span, .info-com span {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+    color: var(--line-menu);
+}
+
+.amigos-comunidades ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.amigos-comunidades li {
+    list-style: none;
+}
+
+.amigos-comunidades img{
+    width: 9.5rem;
+    height: 9.5rem;
+    border-radius: 20%;
+}
+
+.comunidades{
+    margin-top: 1.5rem;
+}
+
+.info-amigos, .info-comunidades{
+    background: var(--bg-amig-com);
+    margin-left: 0.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.info-amigos p, .info-comunidades p {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.amigos a, .comunidades a {
+    display: flex;
+    text-decoration: none;
+    color: var(--bg-header);
+    font-weight: 700;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.amigos a:hover, .comunidades a:hover {
+    color: var(--text-bio);
+}
