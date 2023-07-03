@@ -363,8 +363,13 @@ div .info-messages {
     padding: 1rem;
     border-radius: 1rem;
 }
+.info-amigos a{
+    display: flex;
+    margin-top: 0.5rem;
+    text-decoration: none;
+}
 
-.info-amigos p, .info-comunidades p {
+.info-comunidades p {
     display: flex;
     margin-top: 0.5rem;
 }
